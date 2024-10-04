@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+}
+
+.calculator {
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #161616;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; /* Set a max width for larger screens */
+}
+
+#display {
+    width: 98%;
+    height: 40px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #272727;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clearColor {
+    background-color: rgb(185, 50, 50);
+}
+
+.clearColor:hover {
+    background-color: #ff0303;
+}
+
+.operatorColor {
+    background-color: rgb(194, 95, 37);
+}
+
+.operatorColor:hover {
+    background-color: #ff6803;
+}
+
+button:hover {
+    background-color: #0c0c0c;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    #display {
+        font-size: 20px; /* Smaller font size on small screens */
+    }
+
+    button {
+        padding: 15px; /* Smaller padding for buttons */
+        font-size: 16px; /* Smaller font size for buttons */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #display {
+        font-size: 22px; /* Medium font size for medium screens */
+    }
+
+    button {
+        padding: 18px; /* Adjust padding for medium screens */
+        font-size: 17px; /* Adjust font size for buttons */
+    }
+}
